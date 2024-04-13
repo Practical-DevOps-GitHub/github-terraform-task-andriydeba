@@ -1,4 +1,4 @@
-terraform Github  solution - terraform {
+terraform Github - terraform {
   required_providers {
     github = {
       source  = "integrations/github"
@@ -8,6 +8,7 @@ terraform Github  solution - terraform {
 }
 
 locals {
+  repo_name = "classroom"
   repo_name = "github-terraform-task-andriydeba"
   user_name = "softservedata"
   pr_tmplt_content = <<EOT
