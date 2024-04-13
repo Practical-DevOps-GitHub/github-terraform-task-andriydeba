@@ -1,15 +1,20 @@
-terraform Github - terraform {
-  required_providers {
-    github = {
-      source  = "integrations/github"
-      version = "~> 5.0"
-    }
-  }
+#terraform Github - terraform {
+#  required_providers {
+#    github = {
+#      source  = "integrations/github"
+#      version = "~> 5.0"
+#    }
+#  }
+#}
+
+provider "github" {
+  owner = "Practical-DevOps-GitHub"
+  token = "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"
 }
 
 locals {
-  repo_name = "classroom"
-#  repo_name = "github-terraform-task-andriydeba"
+#  repo_name = "classroom"
+  repo_name = "github-terraform-task-andriydeba"
   user_name = "softservedata"
   pr_tmplt_content = <<EOT
     ## Describe your changes
