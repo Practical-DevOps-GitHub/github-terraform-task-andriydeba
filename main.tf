@@ -6,7 +6,8 @@ provider "github" {
 locals {
   repo_name = "TERRAFORM"
 #  repo_name = "github-terraform-task-andriydeba"
-  user_name = "softservedata"
+#  user_name = "softservedata"
+  user_name = "andriydeba"
   pr_tmplt_content = <<EOT
     ## Describe your changes
 
