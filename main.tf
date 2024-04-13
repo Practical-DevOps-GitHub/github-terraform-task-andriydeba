@@ -3,8 +3,9 @@ terraform Github - terraform {
     github = {
       token = var.PAT
       owner = var.GITHUB_OWNER
-#      source  = "integrations/github"
+      source  = "integrations/github"
 #      version = "~> 5.0"
+      version = "latest"
     }
   }
 }
