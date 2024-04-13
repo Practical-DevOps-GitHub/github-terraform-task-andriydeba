@@ -9,7 +9,7 @@ terraform Github - terraform {
 
 locals {
   repo_name = "classroom"
-  repo_name = "github-terraform-task-andriydeba"
+#  repo_name = "github-terraform-task-andriydeba"
   user_name = "softservedata"
   pr_tmplt_content = <<EOT
     ## Describe your changes
