@@ -1,18 +1,6 @@
-terraform Github - terraform {
-  required_providers {
-    github = {
+provider "github" {
       token = var.PAT
       owner = var.GITHUB_OWNER
-      source  = "integrations/github"
-#      version = "~> 5.0"
-      version = "latest"
-    }
-  }
-}
-
-provider "github" {
-  owner = "Practical-DevOps-GitHub"
-  token = "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"
 }
 
 locals {
