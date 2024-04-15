@@ -8,9 +8,9 @@ terraform Github  - terraform {
 }
 
 
-provider "github" {
-      token = var.PAT
-      owner = var.GITHUB_OWNER
+#provider "github" {
+#      token = var.PAT
+#      owner = var.GITHUB_OWNER
 }
 
 locals {
