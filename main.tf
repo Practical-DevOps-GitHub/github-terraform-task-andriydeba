@@ -1,4 +1,4 @@
-terraform Github  - terraform {
+terraform Github  solution - terraform {
   required_providers {
     github = {
       source  = "integrations/github"
@@ -7,17 +7,9 @@ terraform Github  - terraform {
   }
 }
 
-
-#provider "github" {
-#      token = var.PAT
-#      owner = var.GITHUB_OWNER
-}
-
 locals {
-# repo_name = "TERRAFORM"
-  repo_name = "github-terraform-task-andriydeba"
+  repo_name = "github-terraform-task-solution"
   user_name = "softservedata"
-#  user_name = "andriydeba"
   pr_tmplt_content = <<EOT
     ## Describe your changes
 
@@ -53,7 +45,7 @@ resource "github_branch_protection" "main_protect_rules" {
 
   required_pull_request_reviews {
     require_code_owner_reviews = true
-    required_approving_review_count = 2
+    required_approving_review_count = 0
   }
 }
 
@@ -95,7 +87,7 @@ resource "github_repository_webhook" "discord_webhook" {
   repository = local.repo_name
 
   configuration {
-    url          = "https://discord.com/api/webhooks/https://discordapp.com/api/webhooks/1223399263824773282/JpPfoJroZEW3IKcg54_jNk0UG3zoA9bfKjxuawbyQamSZB3XBU473AjAEEoXZXjpS-PP/github/github"
+    url          = "https://discord.com/api/webhooks/********************************************7/github"
     content_type = "application/json"
   }
 
@@ -105,11 +97,11 @@ resource "github_repository_webhook" "discord_webhook" {
 resource "github_repository_deploy_key" "repository_deploy_key" {
   title      = "DEPLOY_KEY"
   repository = local.repo_name
-  key        = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCVurD1MREsHZG3ntDkXaIyegVoZO2RVcwWBCxN079m8L8D6jjevff+YUOs+L5tagrmIo/DWveBC/CMgki7EgHdcRM/dcem01GVEx1+9TQe9txZasPtlr0Rd7slnLiHGy8i1NOmb1rQMyay5lAPSV7LyG6gWkqenR9r6VOxFimlvsoYNMuEhQE1hL93AqSJh/PLDEzSl+oUrdxuXn6z3KEQDh3eOMty3uNVktr8XCBKwj9WYaOyt6xVeOiF26bJ6/IKQYDqUgP2ilG1nYK5UuOcSdQ4vFZXiS2ESOqpmruAxiCAbBYWT1RafSI3E9oZsr7FBv8kBX15hInzRu6/sby5 rsa-key-20240413"
+  key        = "ssh-rsa *******************************************************************w=="
 }
 
 resource "github_actions_secret" "pat_secret" {
   repository       = local.repo_name
   secret_name      = "PAT"
-  plaintext_value  = "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"
+  plaintext_value  = "***************************"
 }
