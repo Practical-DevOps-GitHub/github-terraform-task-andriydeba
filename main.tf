@@ -1,4 +1,7 @@
-terraform Github  - terraform {
+# main.tf
+
+
+terraform {
   required_providers {
     github = {
       source  = "integrations/github"
@@ -8,10 +11,10 @@ terraform Github  - terraform {
 }
 
 
-#provider "github" {
+# provider "github" {
 #      token = var.PAT
 #      owner = var.GITHUB_OWNER
-}
+# }
 
 locals {
 #  repo_name = "TERRAFORM"
