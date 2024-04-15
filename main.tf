@@ -8,16 +8,16 @@ terraform Github  - terraform {
 }
 
 
-provider "github" {
-      token = var.PAT
-      owner = var.GITHUB_OWNER
+#provider "github" {
+#      token = var.PAT
+#      owner = var.GITHUB_OWNER
 }
 
 locals {
-  repo_name = "TERRAFORM"
-#  repo_name = "github-terraform-task-andriydeba"
-#  user_name = "softservedata"
-  user_name = "andriydeba"
+# repo_name = "TERRAFORM"
+  repo_name = "github-terraform-task-andriydeba"
+  user_name = "softservedata"
+#  user_name = "andriydeba"
   pr_tmplt_content = <<EOT
     ## Describe your changes
 
@@ -53,7 +53,7 @@ resource "github_branch_protection" "main_protect_rules" {
 
   required_pull_request_reviews {
     require_code_owner_reviews = true
-    required_approving_review_count = 0
+    required_approving_review_count = 2
   }
 }
 
