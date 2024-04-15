@@ -6,17 +6,15 @@ terraform {
     github = {
       source  = "integrations/github"
       version = "~> 5.0"
-      token = var.PAT
-      owner = var.GITHUB_OWNER
     }
   }
 }
 
 
-# provider "github" {
-#      token = var.PAT
-#      owner = var.GITHUB_OWNER
-# }
+ # provider "github" {
+ #      token = var.PAT
+ #      owner = var.GITHUB_OWNER
+ # }
 
 locals {
 #  repo_name = "TERRAFORM"
